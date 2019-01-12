@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB13FCAB-F03E-4651-920D-125C0F139880}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoModelo.Domain</RootNamespace>
+    <AssemblyName>ProjetoModelo.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Geografia\Cidade.cs" />
+    <Compile Include="Entities\Cliente\Cliente.cs" />
+    <Compile Include="Entities\Geografia\Endereco.cs" />
+    <Compile Include="Entities\Geografia\Estado.cs" />
+    <Compile Include="Entities\Fornecedor\Fornecedor.cs" />
+    <Compile Include="Entities\Produto\Produto.cs" />
+    <Compile Include="Entities\Venda\TipoVenda.cs" />
+    <Compile Include="Entities\Venda\Venda.cs" />
+    <Compile Include="Exceptions\CustomException.cs" />
+    <Compile Include="Interfaces\Repository\ADO\IClienteADORepository.cs" />
+    <Compile Include="Interfaces\Repository\IFornecedorRepository.cs" />
+    <Compile Include="Interfaces\Repository\IVendaRepository.cs" />
+    <Compile Include="Interfaces\Repository\ReadOnly\IFornecedorReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Repository\ReadOnly\IProdutoReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Repository\ReadOnly\IVendaReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Services\IFornecedorService.cs" />
+    <Compile Include="Interfaces\Services\IVendaService.cs" />
+    <Compile Include="Interfaces\Specification\ISpecification.cs" />
+    <Compile Include="Interfaces\Validation\IFiscal.cs" />
+    <Compile Include="Interfaces\Validation\IRegra.cs" />
+    <Compile Include="Services\FornecedorService.cs" />
+    <Compile Include="Services\VendaService.cs" />
+    <Compile Include="Specification\Clientes\ClientePossuiCPFValido.cs" />
+    <Compile Include="Specification\Clientes\ClientePossuiStatusAtivo.cs" />
+    <Compile Include="Specification\Clientes\ClienteEstaCadastradoMaisDeCincoAnos.cs" />
+    <Compile Include="Specification\Clientes\ClientePossuiEnderecoCadastradoSpecification.cs" />
+    <Compile Include="Specification\Produtos\ProdutoTemValorAcimaDeZero.cs" />
+    <Compile Include="Validation\Base\FiscalBase.cs" />
+    <Compile Include="Validation\Clientes\ClienteEstaAptoParaCadastroNoSistema.cs" />
+    <Compile Include="Validation\Documentos\CNPJValidation.cs" />
+    <Compile Include="Validation\Documentos\CPFValidation.cs" />
+    <Compile Include="Validation\Regra.cs" />
+    <Compile Include="Interfaces\Repository\ICidadeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IClienteRepository.cs" />
+    <Compile Include="Interfaces\Repository\IEnderecoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IEstadoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repository\ReadOnly\IClienteReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Services\ICidadeService.cs" />
+    <Compile Include="Interfaces\Services\IClienteService.cs" />
+    <Compile Include="Interfaces\Services\IEnderecoService.cs" />
+    <Compile Include="Interfaces\Services\IEstadoService.cs" />
+    <Compile Include="Interfaces\Services\IProdutoService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
+    <Compile Include="Interfaces\Validation\ISelfValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CidadeService.cs" />
+    <Compile Include="Services\ClienteService.cs" />
+    <Compile Include="Services\EnderecoService.cs" />
+    <Compile Include="Services\EstadoService.cs" />
+    <Compile Include="Services\ProdutoService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="ValueObjects\EnderecosCliente.cs" />
+    <Compile Include="ValueObjects\ValidationError.cs" />
+    <Compile Include="ValueObjects\ValidationResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ProjetoModelo.Application.ViewModels.ProdutoViewModel>
+
+@{
+    ViewBag.Title = "Escolha quais produtos comprar";
+}
+
+<h2>@ViewBag.Title</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayName("Cliente")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disponivel)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Fornecedor.Nome)
+            </th>*@
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            @Html.BeginForm("Venda", "Venda", new { id = item.ProdutoId })
+            {
+                <tr>
+                    <td>
+                    @Html.DropDownList("ClienteId", String.Empty)
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Valor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Disponivel)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.Fornecedor.Nome)
+                    </td>*@
+                    <td>
+                        <input type="submit" value="Comprar" class="btn btn-default" />
+                    </td>
+                </tr>
+            }
+        }
+    </table>

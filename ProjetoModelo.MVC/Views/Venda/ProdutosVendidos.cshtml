@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProjetoModelo.Application.ViewModels.VendaViewModel>
+
+@{
+    ViewBag.Title = "ProdutosVendidos";
+}
+
+<h2>ProdutosVendidos</h2>
+
+<p>
+    @Html.ActionLink("Nova Venda", "Index")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdutosList.First().Nome)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdutosList.First().Nome)
+        </td>
+    </tr>
+}
+
+</table>

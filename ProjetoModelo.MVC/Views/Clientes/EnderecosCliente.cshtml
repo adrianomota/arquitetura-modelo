@@ -1,0 +1,82 @@
+﻿@*@model ProjetoModelo.Application.ViewModels.ClienteViewModel
+@{        
+    if (Model.Enderecos.Any())
+    {
+        var endereco = Model.Enderecos.First();
+        <table id="enderecos" class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => endereco.Rua)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => endereco.Numero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => endereco.Complemento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => endereco.Bairro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => endereco.CEP)
+                </th>
+                <th>
+                    @Html.DisplayName("Estado")
+                </th>
+                <th>
+                    @Html.DisplayName("Cidade")
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Enderecos)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rua)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Numero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Complemento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bairro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CEP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estado.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cidade.Nome)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new {id = item.EnderecoId}) |
+                        @Html.ActionLink("Details", "Details", new {id = item.EnderecoId}) |
+                        @Html.ActionLink("Delete", "Delete", new {id = item.EnderecoId})
+                    </td>
+                </tr>
+            }
+
+        </table>
+    }
+}*@
+
+@Html.ActionLink("Adicionar Endereço", "CreateEndereco", "Clientes")
+
+<table id="enderecosJson">
+    <thead>
+        <tr>
+            <th>Rua</th>
+            <th>Numero</th>
+            <th>Complemento</th>
+            <th>Bairro</th>
+            <th>CEP</th>
+            <th>Estado</th>
+            <th>Cidade</th>
+        </tr>
+    </thead>
+</table>                   

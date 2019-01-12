@@ -1,0 +1,16 @@
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\bin\Debug\ProjetoModelo.Infra.CrossCutting.Log.dll
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\bin\Debug\ProjetoModelo.Infra.CrossCutting.Log.pdb
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\obj\Debug\ProjetoModelo.Infra.CrossCutting.Log.csprojResolveAssemblyReference.cache
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\obj\Debug\ProjetoModelo.Infra.CrossCutting.Log.dll
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\obj\Debug\ProjetoModelo.Infra.CrossCutting.Log.pdb
+G:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\bin\Debug\ProjetoModelo.Infra.CrossCutting.Log.dll
+G:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\bin\Debug\ProjetoModelo.Infra.CrossCutting.Log.pdb
+G:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\obj\Debug\ProjetoModelo.Infra.CrossCutting.Log.csprojAssemblyReference.cache
+G:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\obj\Debug\ProjetoModelo.Infra.CrossCutting.Log.csproj.CoreCompileInputs.cache
+G:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\obj\Debug\ProjetoModelo.Infra.CrossCutting.Log.dll
+G:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\obj\Debug\ProjetoModelo.Infra.CrossCutting.Log.pdb
+D:\gitprojects\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\bin\Debug\ProjetoModelo.Infra.CrossCutting.Log.dll
+D:\gitprojects\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\bin\Debug\ProjetoModelo.Infra.CrossCutting.Log.pdb
+D:\gitprojects\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\obj\Debug\ProjetoModelo.Infra.CrossCutting.Log.csproj.CoreCompileInputs.cache
+D:\gitprojects\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\obj\Debug\ProjetoModelo.Infra.CrossCutting.Log.dll
+D:\gitprojects\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Log\obj\Debug\ProjetoModelo.Infra.CrossCutting.Log.pdb

@@ -1,0 +1,6 @@
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Datatables\bin\Debug\ProjetoModelo.Infra.CrossCutting.Datatables.dll
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Datatables\bin\Debug\ProjetoModelo.Infra.CrossCutting.Datatables.pdb
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Datatables\bin\Debug\Newtonsoft.Json.dll
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Datatables\obj\Debug\ProjetoModelo.Infra.CrossCutting.Datatables.csprojResolveAssemblyReference.cache
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Datatables\obj\Debug\ProjetoModelo.Infra.CrossCutting.Datatables.dll
+D:\Projetos\Arquitetura Modelo\ProjetoModelo.Infra.CrossCutting.Datatables\obj\Debug\ProjetoModelo.Infra.CrossCutting.Datatables.pdb

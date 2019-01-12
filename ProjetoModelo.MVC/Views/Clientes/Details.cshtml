@@ -1,0 +1,105 @@
+﻿@model ProjetoModelo.Application.ViewModels.ClienteViewModel
+
+@{
+    ViewBag.Title = "Detalhes do Cliente";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClienteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<h2>Endereços do Cliente</h2>
+
+@RenderPage("EnderecosCliente.cshtml", Model)
+
+@section scripts
+{
+
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.css">
+
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+    <script type="text/javascript">
+        //$(document).ready(function () {
+        //    $('#enderecos').dataTable();
+        //});
+
+        //$('#enderecos')
+        //    .removeClass('table')
+        //    .addClass('table table-striped table-bordered');
+
+        $(document).ready(function() {
+            $('#enderecosJson').dataTable({
+                dom: "rtil",
+                "bServerSide": true,
+               "sAjaxDataProp": "aaData",
+                "bProcessing": true,
+                "bLengthChange": false,
+                "aoColumns": [
+                { "aaData": "Rua" },
+                { "aaData": "Numero" },
+                { "aaData": "Complemento" },
+                { "aaData": "Bairro" },
+                { "aaData": "CEP" },
+                { "aaData": "Estado" },
+                { "aaData": "Cidade" }
+                ],
+                "sAjaxSource": 'http://localhost:26669/api/clientes/@Model.ClienteId',
+        });
+    });
+
+        $('#enderecosJson')
+            .removeClass('table')
+            .addClass('table table-striped table-bordered');
+    </script>
+
+}
